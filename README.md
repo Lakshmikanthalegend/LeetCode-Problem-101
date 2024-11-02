@@ -1,1 +1,2 @@
 # LeetCode-Problem-101
+To determine if a binary tree is symmetric, we employ a recursive technique that compares nodes in a mirrored fashion. A helper function, isMirror, checks if two nodes are equal and recursively verifies their left and right children for symmetry. The process starts with the root's children. This approach efficiently assesses both structure and values, ensuring the tree is a mirror of itself, with a time complexity of O(n).
