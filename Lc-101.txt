@@ -1,0 +1,23 @@
+class Solution {
+    public boolean isSymmetric(TreeNode root) {
+	//Check if root is null
+        if(root == null){
+            return true;
+        }
+        return isMirror(root.left, root.right);
+    }
+    private boolean isMirror(TreeNode left, TreeNode right) {
+        // If both nodes are null, they are mirrors
+        if (left == null && right == null) {
+            return true;
+        }
+        // If one of the nodes is null, they are not mirrors
+        if (left == null || right == null) {
+            return false;
+        }
+        // Check if the current nodes are equal and their subtrees are mirrors
+        return (left.val == right.val) 
+            && isMirror(left.left, right.right) 
+            && isMirror(left.right, right.left);
+    }
+}
